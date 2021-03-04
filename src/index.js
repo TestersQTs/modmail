@@ -1,6 +1,6 @@
 const BotClient = require("./structures/BotClient");
 const db = require("./utils/database/connection");
-const fs = require('fs');
+const fs = require("fs");
 require("./structures/Config");
 require("dotenv").config();
 
@@ -14,10 +14,10 @@ const client = new BotClient(config);
 
 client.ws.on("INTERACTION_CREATE", async interaction => {
 	const { token, id } = interaction;
-	if (fs.existsSync(`./commandsSlash/${interaction.data.name}`))
+
+	if (fs.existsSync(`${__dirname}/commandsSlash/${interaction.data.name}.js`))
 		await require(`./commandsSlash/${interaction.data.name}`)(client, token, id, interaction);
-	else
-		console.log("Something shit itself very very badly")
+	else console.error("lol error");
 });
 
 db.authenticate()
