@@ -7,9 +7,12 @@ module.exports = async (client, token, id, interaction) => {
 		},
 	});
 
+	let latency = new Date(Number((BigInt(id) >> 22n) + 1420070400000n)) - Date.now()
+
 	const embed = new Discord.MessageEmbed()
 		.setColor("#7289DA")
-		.setDescription(`WebSocket latency is **${Math.round(client.ws.ping)}ms**`)
+		.setDescription(`WebSocket latency is **${Math.round(client.ws.ping)}ms**
+		API latency is **${latency}ms**`)
 		.setFooter(
 			`Executed by: ${interaction.member.user.username}#${interaction.member.user.discriminator}`,
 			(await client.users.fetch(interaction.member.user.id)).avatarURL(),
