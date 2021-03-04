@@ -1,0 +1,16 @@
+---
+name: "Mod Mail"
+developers: ["190160914765316096", "439396770695479297"]
+
+# configs
+prefix: "!"
+embedColor: "#7289DA"
+
+client:
+  status: "yeet"
+  game: "yeet"
+  type: "watching"
+
+mainServerId: "784408056997216327"
+inboxServerId: ""
+logChannelId: "816029630447353947"

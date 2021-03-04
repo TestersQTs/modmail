@@ -1,0 +1,30 @@
+{
+	"name": "modmail",
+	"version": "1.0.0",
+	"main": "src/index.js",
+	"scripts": {
+		"start": "node src/index.js",
+		"dev": "nodemon",
+		"db-sync": "node src/utils/database/sync.js"
+	},
+	"repository": "https://github.com/TestersQTs/modmail.git",
+	"author": "TesterQTs",
+	"license": "MIT",
+	"bugs": {
+		"url": "https://github.com/TestersQTs/Bulbbot/issues"
+	},
+	"dependencies": {
+		"axios": "^0.21.1",
+		"discord.js": "^12.5.1",
+		"dotenv": "^8.2.0",
+		"js-yaml": "^4.0.0",
+		"moment": "^2.29.1",
+		"pg": "^8.5.1",
+		"sequelize": "^6.5.0",
+		"sqlite3": "^5.0.2",
+		"uuid": "^8.3.2"
+	},
+	"devDependencies": {
+		"prettier": "^2.2.1"
+	}
+}

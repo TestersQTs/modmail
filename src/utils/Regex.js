@@ -1,0 +1,1 @@
+exports.NonDigits = /\D/g;
