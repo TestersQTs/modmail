@@ -7,9 +7,9 @@ prefix: "!"
 embedColor: "#7289DA"
 
 client:
-  status: "yeet"
+  status: "online"
   game: "yeet"
-  type: "watching"
+  type: "WATCHING"
 
 mainServerId: "784408056997216327"
 inboxServerId: ""
