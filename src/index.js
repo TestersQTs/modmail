@@ -19,12 +19,14 @@ client.ws.on("INTERACTION_CREATE", async interaction => {
 			await require("./commandsSlash/ping")(client, token, id, interaction);
 			break;
 
+		case "info":
+			await require("./commandsSlash/info")(client, token, id, interaction)
+			break
+
 		default:
 			console.error("Something shit itself very very badly");
 			break;
 	}
-
-	console.log(interaction);
 });
 
 db.authenticate()
