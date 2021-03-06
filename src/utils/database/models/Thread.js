@@ -1,12 +1,17 @@
 const { DataTypes } = require("sequelize");
 
 module.exports = sequelize => {
-	sequelize.define("guild", {
-		guildId: {
+	sequelize.define("thread", {
+		isActive: {
+			type: DataTypes.BOOLEAN,
+			defaultValue: true,
+			allowNull: false,
+		},
+		messageId: {
 			type: DataTypes.STRING,
 			allowNull: false,
 		},
-		name: {
+		uuid: {
 			type: DataTypes.STRING,
 			allowNull: false,
 		},

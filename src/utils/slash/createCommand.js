@@ -7,6 +7,6 @@ config({
 
 axios.post(
 	"https://discord.com/api/v8/applications/791331386379993088/guilds/784408056997216327/commands",
-	{ name: "ping", description: "Return the Websocket and API latency" },
+	{ name: "clearMail", description: "Delete all channels in the mod mail category" },
 	{ headers: { Authorization: `Bot ${process.env.TOKEN}` } },
 );

@@ -1,7 +1,8 @@
 function ApplyExtra(sequelize) {
-	const { guild, guildConfiguration } = sequelize.models;
+	const { thread, users, message } = sequelize.models;
 
-	guild.belongsTo(guildConfiguration, {});
+	users.hasMany(thread, {});
+	thread.hasMany(message, {});
 }
 
 module.exports = { ApplyExtra };

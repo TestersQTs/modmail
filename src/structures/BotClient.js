@@ -4,7 +4,7 @@ const BotUtils = require("../utils/BotUtils");
 
 const { PermissionException } = require("./exceptions/PermissionException");
 
-module.exports = class BulbBotClient extends Client {
+module.exports = class BotClient extends Client {
 	constructor(options = {}) {
 		super({
 			disableMentions: "everyone",
@@ -19,7 +19,7 @@ module.exports = class BulbBotClient extends Client {
 
 		this.utils = new Util(this);
 
-		this.bulbutils = new BotUtils(this);
+		this.botutils = new BotUtils(this);
 	}
 
 	validate(options) {

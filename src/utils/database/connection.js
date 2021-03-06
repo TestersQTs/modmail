@@ -23,7 +23,7 @@ const sequelize = new Sequelize(process.env.DB_NAME, process.env.DB_USER, proces
 	},
 });
 
-const models = [require("./models/guild.js"), require("./models/guildConfiguration")];
+const models = [require("./models/Users.js"), require("./models/Thread"), require("./models/Message")];
 
 for (const modelDefiner of models) modelDefiner(sequelize);
 ApplyExtra(sequelize);
