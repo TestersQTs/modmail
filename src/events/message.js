@@ -1,4 +1,5 @@
 const Event = require("../structures/Event");
+const HandleDms = require("../utils/threads/HandleDms");
 
 module.exports = class extends Event {
 	constructor(...args) {
@@ -6,6 +7,8 @@ module.exports = class extends Event {
 	}
 
 	async run(message) {
+		if (message.channel.type === "dm") return HandleDms(this.client, message);
+
 		const mentionRegex = RegExp(`^<@!?${this.client.user.id}>`);
 		if (!message.guild || message.author.bot) return;
 
